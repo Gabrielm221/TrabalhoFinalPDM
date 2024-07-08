@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "827061202644",
+    "project_id": "myfinalproject-fecfe",
+    "storage_bucket": "myfinalproject-fecfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827061202644:android:4d275e122e0aa8893b5541",
+        "android_client_info": {
+          "package_name": "com.example.myfinalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb_grNQwlpMBRqkh7Xi3guL-xJgYdtoWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

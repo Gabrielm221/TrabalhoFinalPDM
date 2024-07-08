@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.ProdutosActivity">
+
+    <TextView
+        android:id="@+id/textViewProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Página de Produtos"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/jEditIdProduto"
+        android:layout_width="240dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:hint="Informe o ID do produto"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProdutos" />
+
+    <EditText
+        android:id="@+id/jEditTipoGrao"
+        android:layout_width="232dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:hint="Tipo do grão (Arábica/Conilon)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jEditIdProduto" />
+
+    <EditText
+        android:id="@+id/jEditPontoTorra"
+        android:layout_width="230dp"
+        android:layout_height="58dp"
+        android:ems="10"
+        android:hint="Ponto da torra (Média/Forte)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jEditTipoGrao" />
+
+    <EditText
+        android:id="@+id/jEditValor"
+        android:layout_width="231dp"
+        android:layout_height="61dp"
+        android:ems="10"
+        android:hint="Valor do produto"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jEditPontoTorra" />
+
+    <ToggleButton
+        android:id="@+id/jToggleBlend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textOff="Não misturado"
+        android:textOn="Misturado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jEditValor" />
+
+    <ImageButton
+        android:id="@+id/jButtonVoltarProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <ImageButton
+        android:id="@+id/jButtonAdicionarProduto"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        app:layout_constraintEnd_toStartOf="@+id/jButtonBuscarProduto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jToggleBlend"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/jButtonBuscarProduto"
+        android:layout_width="47dp"
+        android:layout_height="41dp"
+        app:layout_constraintEnd_toStartOf="@+id/jButtonExcluirProduto"
+        app:layout_constraintStart_toEndOf="@+id/jButtonAdicionarProduto"
+        app:layout_constraintTop_toBottomOf="@+id/jToggleBlend"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+    <ImageButton
+        android:id="@+id/jButtonExcluirProduto"
+        android:layout_width="51dp"
+        android:layout_height="41dp"
+        app:layout_constraintEnd_toStartOf="@+id/jButtonListarProdutos"
+        app:layout_constraintStart_toEndOf="@+id/jButtonBuscarProduto"
+        app:layout_constraintTop_toBottomOf="@+id/jToggleBlend"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <ImageButton
+        android:id="@+id/jButtonListarProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/jButtonExcluirProduto"
+        app:layout_constraintTop_toBottomOf="@+id/jToggleBlend"
+        app:srcCompat="@android:drawable/ic_menu_zoom" />
+
+    <TextView
+        android:id="@+id/textViewAdicionarProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/jButtonAdicionarProduto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/jButtonAdicionarProduto"
+        app:layout_constraintTop_toBottomOf="@+id/jButtonAdicionarProduto" />
+
+    <TextView
+        android:id="@+id/textViewBuscarProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/jButtonBuscarProduto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/jButtonBuscarProduto"
+        app:layout_constraintTop_toBottomOf="@+id/jButtonBuscarProduto" />
+
+    <TextView
+        android:id="@+id/textViewExcluirProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/jButtonExcluirProduto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/jButtonExcluirProduto"
+        app:layout_constraintTop_toBottomOf="@+id/jButtonExcluirProduto" />
+
+    <TextView
+        android:id="@+id/textViewListarProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/jButtonListarProdutos"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/jButtonListarProdutos"
+        app:layout_constraintTop_toBottomOf="@+id/jButtonListarProdutos" />
+
+    <ImageButton
+        android:id="@+id/jButtonAlterarProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewListarProdutos"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <TextView
+        android:id="@+id/textViewAlterarProduto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alterar"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/jButtonAlterarProduto"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/jButtonAlterarProduto"
+        app:layout_constraintTop_toBottomOf="@+id/jButtonAlterarProduto" />
+
+    <ListView
+        android:id="@+id/produtosList"
+        android:layout_width="409dp"
+        android:layout_height="238dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jButtonAlterarProduto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

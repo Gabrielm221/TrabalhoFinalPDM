@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_back_pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/text_id_pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_back_pd"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:hint="ID do Pedido"
+        android:inputType="text"
+        android:ems="10" />
+
+    <Spinner
+        android:id="@+id/dd_cli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_id_pd"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/dd_prod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dd_cli"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:spinnerMode="dropdown" />
+
+    <Button
+        android:id="@+id/bt_add_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dd_prod"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Adicionar Produto ao Pedido" />
+
+    <Button
+        android:id="@+id/bt_rm_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/bt_add_car"
+        android:layout_alignTop="@id/bt_add_car"
+        android:text="Remover Produto do Pedido" />
+
+    <Button
+        android:id="@+id/bt_add_pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_rm_car"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Novo Pedido" />
+
+    <Button
+        android:id="@+id/bt_rm_pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/bt_add_pd"
+        android:layout_alignTop="@id/bt_add_pd"
+        android:text="Excluir Pedido" />
+
+    <Button
+        android:id="@+id/bt_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_add_pd"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Listar Pedidos por Cliente" />
+
+    <Button
+        android:id="@+id/bt_all_pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/bt_f"
+        android:layout_alignTop="@id/bt_f"
+        android:text="Listar Todos os Pedidos" />
+
+    <Button
+        android:id="@+id/bt_att_pd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_f"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="Alterar Pedido" />
+
+    <ListView
+        android:id="@+id/lt_pd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_att_pd"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp" />
+
+    <ListView
+        android:id="@+id/lt_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lt_pd"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/black"
+        android:dividerHeight="1dp" />
+
+    <EditText
+        android:id="@+id/text_qt_prod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:ems="10"
+        android:hint="Quantidade do Produto"
+        android:inputType="number" />
+</RelativeLayout>
